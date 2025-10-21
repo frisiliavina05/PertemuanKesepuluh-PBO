@@ -50,10 +50,10 @@ Data yang telah dibaca dari file biasanya disimpan sementara dalam struktur sepe
 JFileChooser adalah komponen bawaan dari Java Swing yang digunakan untuk menampilkan jendela dialog pemilihan file secara interaktif. Melalui komponen ini, pengguna dapat memilih file secara langsung dari tampilan file explorer, sehingga tidak perlu lagi menuliskan lokasi atau path file secara manual.
 
 # Alur Proses Upload CSV
-<br> 1. Pengguna menekan tombol Upload untuk menampilkan dialog JFileChooser.
-<br> 2. File CSV dipilih dari penyimpanan lokal.
-<br> 3. Program membaca isi file menggunakan BufferedReader atau pustaka seperti OpenCSV.
-<br> 4. Data yang telah dibaca dimasukkan ke dalam DefaultTableModel.
-<br> 5. Komponen JTable kemudian menampilkan data tersebut pada antarmuka aplikasi
+1. Pengguna menekan tombol Upload untuk menampilkan dialog JFileChooser. <br>
+2. File CSV dipilih dari penyimpanan lokal. <br>
+3. Program membaca isi file menggunakan BufferedReader atau pustaka seperti OpenCSV. <br>
+4. Data yang telah dibaca dimasukkan ke dalam DefaultTableModel. <br>
+5. Komponen JTable kemudian menampilkan data tersebut pada antarmuka aplikasi. <br>
 
 
