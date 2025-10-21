@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45613176-faaf-469c-9850-f47fe7414ae2">
+	<property name="ireport.zoom" value="1.1000000000000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM musik]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="judul" class="java.lang.String"/>
+	<field name="artis" class="java.lang.String"/>
+	<field name="tahun" class="java.lang.Integer"/>
+	<variable name="TotalMusik" class="java.lang.Long" calculation="Count">
+		<variableExpression><![CDATA[$F{id}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<image>
+				<reportElement x="56" y="6" width="80" height="67" uuid="5c4d922d-c905-43e7-b5a4-01eaad01d4e2"/>
+				<imageExpression><![CDATA["C:\\Users\\HP\\OneDrive\\Pictures\\MUSIK2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="154" y="11" width="376" height="71" uuid="97906565-c29a-446e-a694-e023659e7815"/>
+				<textElement>
+					<font fontName="Bree Serif" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR DATA MUSIK]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="87" width="555" height="1" uuid="2b99b190-55f7-4671-a81b-8428d428e776"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="337" y="17" width="117" height="20" uuid="1342e6b2-d7d4-4238-98da-e54bd0060a5d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<text><![CDATA[Dicetak pada tanggal : ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="450" y="17" width="100" height="20" uuid="a58b66e0-be91-48d3-ac63-51da6139e56f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="74" y="19" width="100" height="20" backcolor="#0066CC" uuid="490ec270-f19a-43d1-a1b6-b3f0e6c77edc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="174" y="19" width="100" height="20" forecolor="#000000" backcolor="#0066CC" uuid="6e8f93e6-be7f-4b67-8951-ac1b89d11454"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="274" y="19" width="100" height="20" backcolor="#0066CC" uuid="20dd038c-91fe-42d0-90f4-977e8ed97dca"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="374" y="19" width="100" height="20" backcolor="#0066CC" uuid="883d16f1-b785-48e9-8f41-0e75fde91304"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="74" y="19" width="100" height="20" forecolor="#FFFFFF" uuid="47e37c10-cede-4d9b-ad07-1c8c100a9db0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID LAGU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="19" width="100" height="20" forecolor="#FFFFFF" uuid="c673607e-a062-47a4-959c-0b9d18b3bca4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="20" width="100" height="20" forecolor="#FFFFFF" uuid="9da74076-18bb-4e0c-bc67-0e1fbea4cf1c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARTIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="19" width="100" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="82576ee8-0adc-4827-9cd2-8ea3ee66cdf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAHUN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="74" y="0" width="100" height="20" uuid="45a7a510-bb27-4713-a0ac-fb3c650454fa"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="174" y="0" width="100" height="20" uuid="00efac9a-de31-4869-824e-1d886fa4706f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="274" y="0" width="100" height="20" uuid="bb59cf4f-1c8a-4efc-b6ff-4f003fe90779"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="374" y="0" width="100" height="20" uuid="ab21cc1a-99b9-42ed-acb4-6c465a4f5be4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="74" y="0" width="100" height="20" uuid="24dfcdd3-7962-4f1c-bee5-4602df51984e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="100" height="20" uuid="19ee4888-529a-410d-99dc-563429c38dfb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="100" height="20" uuid="ee795638-e398-4fa1-b61a-5daa684ffa74"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="0" width="100" height="20" uuid="0bc9d28e-f855-49fb-8a04-b4d1d5890141"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tahun}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="18" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="351" y="21" width="100" height="20" uuid="ad46dc8b-5221-4921-8b84-595a4f460dc0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<text><![CDATA[Total musik  : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="451" y="21" width="100" height="20" uuid="a143f60a-1e05-49a5-9188-fd8f41afbd06"/>
+				<textElement>
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalMusik}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="35" y="23" width="170" height="20" uuid="8e600aac-dd2d-4988-bf16-91492820126b"/>
+				<textElement>
+					<font fontName="Bree Serif"/>
+				</textElement>
+				<text><![CDATA[Dicetak secara otomatis oleh sistem]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
