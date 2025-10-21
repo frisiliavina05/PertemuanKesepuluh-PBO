@@ -11,8 +11,8 @@ File CSV (Comma-Separated Values) adalah salah satu format penyimpanan data berb
 KR020;Don't Go;EXO;2013 
 KR018;Paradise;Treasure;2025
 KO011;Somebody;DO;2023
-KR100;Hello;Chen;2020 K
-O095;Peaches;Kai;2022
+KR100;Hello;Chen;2020
+KO095;Peaches;Kai;2022
 ```
 
 <br> Memahami perbedaan penggunaan delimiter dalam file CSV merupakan hal yang sangat penting agar program Java dapat memproses data dengan benar. Kesalahan dalam menentukan jenis delimiter dapat menyebabkan data tidak terbaca sesuai dengan kolom aslinya, sehingga struktur tabel menjadi tidak teratur dan informasi yang ditampilkan pun bisa keliru.
