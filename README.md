@@ -13,4 +13,45 @@ File CSV (Comma-Separated Values) adalah salah satu format penyimpanan data berb
    KR100;Hello;Chen;2020
    KO095;Peaches;Kai;2022
 
+<br> Memahami perbedaan penggunaan delimiter dalam file CSV merupakan hal yang sangat penting agar program Java dapat memproses data dengan benar. Kesalahan dalam menentukan jenis delimiter dapat menyebabkan data tidak terbaca sesuai dengan kolom aslinya, sehingga struktur tabel menjadi tidak teratur dan informasi yang ditampilkan pun bisa keliru.
+
+# Konsep Pembacaan File CSV pada Java
+Pada Java, pembacaan file CSV dapat dilakukan dengan menggunakan BufferedReader, yang berfungsi untuk membaca isi file secara bertahap, baris demi baris. Setiap baris yang diperoleh kemudian dipisahkan menjadi beberapa elemen data sesuai dengan delimiter yang digunakan (seperti ; atau ,) dengan bantuan metode split().
+
+    try (BufferedReader br = new BufferedReader(new FileReader(filePilihan))) {
+                Class.forName(driver);
+                conn = DriverManager.getConnection(koneksi, user, password);
+                String baris;
+                String pemisah = ";";
+
+                while ((baris = br.readLine()) != null) {
+                    String[] data = baris.split(pemisah);
+                    
+Data yang telah dibaca dari file biasanya disimpan sementara dalam struktur seperti ArrayList atau DefaultTableModel, sebelum akhirnya ditampilkan ke komponen JTable agar dapat dilihat dalam bentuk tabel yang terstruktur.
+
+    String id = data[0];
+                    String judul = data[1];
+                    String artis = data[2];
+                    int tahun = Integer.parseInt(data[3]);
+
+                    if (!id.isEmpty() && !judul.isEmpty() && !artis.isEmpty()) {
+                        String sql = "INSERT INTO musik (id, judul, artis, tahun) VALUES (?,?,?,?)";
+                        pstmt = conn.prepareStatement(sql);
+                        pstmt.setString(1, id);
+                        pstmt.setString(2, judul);
+                        pstmt.setString(3, artis);
+                        pstmt.setInt(4, tahun);
+
+                        pstmt.executeUpdate();
+
+# Komponen JFileChooser pada Java Swing
+JFileChooser adalah komponen bawaan dari Java Swing yang digunakan untuk menampilkan jendela dialog pemilihan file secara interaktif. Melalui komponen ini, pengguna dapat memilih file secara langsung dari tampilan file explorer, sehingga tidak perlu lagi menuliskan lokasi atau path file secara manual.
+
+# Alur Proses Upload CSV
+<br> 1. Pengguna menekan tombol Upload untuk menampilkan dialog JFileChooser.
+<br> 2. File CSV dipilih dari penyimpanan lokal.
+<br> 3. Program membaca isi file menggunakan BufferedReader atau pustaka seperti OpenCSV.
+<br> 4. Data yang telah dibaca dimasukkan ke dalam DefaultTableModel.
+<br> 5. Komponen JTable kemudian menampilkan data tersebut pada antarmuka aplikasi
+
 
