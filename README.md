@@ -1,2 +1,3 @@
-# PENERAPAN KONSEP OOP DALAM SISTEM CRUD BERBASIS CSV
-CSV
+# Penerapan Konsep OOP dalam Sistem CRUD Berbasis CSV
+Pada praktikum pertemuan ke sepuluh ini mengimplementasikan konsep Object-Oriented Programming (OOP) dalam pembuatan sistem CRUD (Create, Read, Update, Delete) menggunakan Java dengan media penyimpanan berbasis CSV (Comma-Separated Values). Tujuan dari proyek ini adalah untuk menunjukkan bagaimana prinsip-prinsip OOP dapat diterapkan dalam pengelolaan data sederhana tanpa menggunakan database seperti MySQL.
+Aplikasi ini juga dilengkapi dengan komponen GUI berbasis Java Swing, yang memungkinkan pengguna berinteraksi secara langsung melalui antarmuka grafis seperti pemilihan file, penampilan data dalam tabel (JTable), serta proses upload dan pembaruan data.
