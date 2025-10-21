@@ -7,11 +7,7 @@ File CSV (Comma-Separated Values) adalah salah satu format penyimpanan data berb
 <br> Meskipun disebut Comma-Separated Values, kenyataannya tidak semua file CSV menggunakan tanda koma (,) sebagai pemisah. Pada beberapa pengaturan regional, seperti Indonesia dan negara-negara Eropa, delimiter yang digunakan justru berupa titik koma (;). Hal ini terjadi karena dalam pengaturan regional tersebut, tanda koma berfungsi sebagai pemisah desimal dalam angka (misalnya 3,14), sehingga untuk menghindari benturan dalam penyimpanan data numerik, aplikasi seperti Excel secara otomatis menggunakan titik koma sebagai pembatas antar kolom. 
 
 <br> Contoh : 
-   KR020;Don't Go;EXO;2013
-   KR018;Paradise;Treasure;2025
-   KO011;Somebody;DO;2023
-   KR100;Hello;Chen;2020
-   KO095;Peaches;Kai;2022
+<pre> ```csv KR020;Don't Go;EXO;2013 KR018;Paradise;Treasure;2025 KO011;Somebody;DO;2023 KR100;Hello;Chen;2020 KO095;Peaches;Kai;2022 ``` </pre>
 
 <br> Memahami perbedaan penggunaan delimiter dalam file CSV merupakan hal yang sangat penting agar program Java dapat memproses data dengan benar. Kesalahan dalam menentukan jenis delimiter dapat menyebabkan data tidak terbaca sesuai dengan kolom aslinya, sehingga struktur tabel menjadi tidak teratur dan informasi yang ditampilkan pun bisa keliru.
 
@@ -48,7 +44,7 @@ Data yang telah dibaca dari file biasanya disimpan sementara dalam struktur sepe
 JFileChooser adalah komponen bawaan dari Java Swing yang digunakan untuk menampilkan jendela dialog pemilihan file secara interaktif. Melalui komponen ini, pengguna dapat memilih file secara langsung dari tampilan file explorer, sehingga tidak perlu lagi menuliskan lokasi atau path file secara manual.
 
 # Alur Proses Upload CSV
-<br> 1. Pengguna menekan tombol Upload untuk menampilkan dialog JFileChooser.
+1. Pengguna menekan tombol Upload untuk menampilkan dialog JFileChooser.
 <br> 2. File CSV dipilih dari penyimpanan lokal.
 <br> 3. Program membaca isi file menggunakan BufferedReader atau pustaka seperti OpenCSV.
 <br> 4. Data yang telah dibaca dimasukkan ke dalam DefaultTableModel.
